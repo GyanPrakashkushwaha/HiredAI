@@ -1,6 +1,6 @@
 <div class="navbar">
     <div class="logo">
-<div class="icon">
+        <div class="icon">
             <svg id="Capa_1" x="0px" y="0px"
             viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
                 <g>
@@ -10,17 +10,14 @@
                 </g>
             </svg>
         </div> 
-        <strong>Recommendation</strong> 
-
-        <strong>System</strong>
-
+        <a href="{% url 'home' %}"><strong>Hired</strong> <strong>AI</strong></a>
     </div>
     <div class="menu">
         <ul>
-            <a><li>For You</li></a>
-            <li>Recommendation</li>
-            <li>Profile</li>
-            <li>Contact</li>
+            <li><a href="{% url 'forYou' %}">For You</a></li>
+            <li><a href="{% url 'recommendation' %}">Recommendation</a></li>
+            <li><a href="{% url 'profile' %}">Profile</a></li>
+            <li><a href="{% url 'about' %}">Contact</a></li>
         </ul>
     </div>
 </div>

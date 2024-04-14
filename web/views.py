@@ -8,5 +8,11 @@ def home(request):
 def forYou(request):
     return render(request=request,template_name='foryou.html')
 
-def hello(request):
-    return render(request=request,template_name='hello.html')
+def recommendation(request):
+    return render(request=request,template_name='recommendation.html')
+
+def profile(request):
+    return render(request=request,template_name='profile.html')
+
+def about(request):
+    return render(request=request,template_name='about.html')
