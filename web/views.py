@@ -15,4 +15,4 @@ def profile(request):
     return render(request=request,template_name='profile.html')
 
 def about(request):
-    return render(request=request,template_name='about.html')
+    return render(request=request,template_name='scrap.html')
