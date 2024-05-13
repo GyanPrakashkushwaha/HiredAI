@@ -1,12 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render , redirect
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from .forms import ResumeForm , GeeksForm
 
 # Create your views here.
 def home(request):
     return render(request=request,template_name='index.html')
 
-def forYou(request):
-    return render(request=request,template_name='foryou.html')
+# def upload(request):
+#     return render(request=request,template_name='upload.html')
 
 def recommendation(request):
     return render(request=request,template_name='recommendation.html')
@@ -16,3 +17,13 @@ def profile(request):
 
 def about(request):
     return render(request=request,template_name='scrap.html')
+
+def upload(request):
+    context = {}
+    context['form'] = ResumeForm()
+    return render( request , "upload.html",context)
+
+def home_view(request): 
+    context = {} 
+    context['form'] = GeeksForm() 
+    return render( request, "home.html", context)
