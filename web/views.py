@@ -1,6 +1,7 @@
 from django.shortcuts import render , redirect
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from .forms import ResumeForm , GeeksForm
+from .forms import ResumeForm 
+from .app import parse_resume
 
 # Create your views here.
 def home(request):
@@ -29,5 +30,11 @@ def upload(request):
             handle_uploaded_file(request.FILES["resume_field"])
     else:
         form = ResumeForm()
+    
+    # Your existing context
     context['form'] = form
-    return render( request , "upload.html",context)
+
+    # Update the existing context with resume data
+    context.update(parse_resume.data(r"assets\resumes\1715680272205.pdf"))
+
+    return render(request, "upload.html", context)
