@@ -6,8 +6,6 @@ from .forms import ResumeForm , GeeksForm
 def home(request):
     return render(request=request,template_name='index.html')
 
-# def upload(request):
-#     return render(request=request,template_name='upload.html')
 
 def recommendation(request):
     return render(request=request,template_name='recommendation.html')

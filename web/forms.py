@@ -6,8 +6,3 @@ class ResumeForm(forms.Form):
     class Meta:
         model = Resume
         fields = ['resume_file']
-
-
-class GeeksForm(forms.Form): 
-    name = forms.CharField() 
-    geeks_field = forms.FileField() 
