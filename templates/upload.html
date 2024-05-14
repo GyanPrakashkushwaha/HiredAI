@@ -2,10 +2,73 @@
 
 {% block content %}
 
-<form method="POST" enctype="multipart/form-data"> 
-	{% csrf_token %} 
-	{{ form.as_p }}   
-	<input type="submit" value="Submit"> 
-</form> 
+<div class="container">
+	<form method="POST" enctype="multipart/form-data"> 
+		{% csrf_token %} 
+		{{ form.as_p }}   
+		<input type="submit" value="Submit"> 
+	</form>	
+</div>
+
+
+<style>
+
+.container{
+	padding: 10vh;
+}
+	/* Style for the entire form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #1a0505;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ad8787;
+}
+
+/* Style for individual form fields */
+form p {
+    margin-bottom: 15px;
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+    background-color: #340d3d;
+    color: white;
+    padding: 15px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #8b3c9e;
+}
+
+/* Style for labels */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+
+    input[type="submit"] {
+        padding: 12px 15px;
+        font-size: 16px;
+    }
+}
+
+</style>
 
 {% endblock content %}
