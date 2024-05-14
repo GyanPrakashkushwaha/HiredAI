@@ -20,7 +20,7 @@
     
         <section>
             <h2>Experience</h2>
-            <ul>
+            <ul class="lst">
                 {% for item in experience %}
                 <li>{{ item }}</li>
                 {% endfor %}
@@ -29,7 +29,7 @@
     
         <section>
             <h2>Companies</h2>
-            <ul>
+            <ul class="lst">
                 {% for company in company_names %}
                 <li>{{ company }}</li>
                 {% endfor %}
@@ -38,7 +38,7 @@
     
         <section>
             <h2>Designations</h2>
-            <ul>
+            <ul class="lst">
                 {% for designation in designation %}
                 <li>{{ designation }}</li>
                 {% endfor %}
@@ -47,7 +47,7 @@
     
         <section>
             <h2>Skills</h2>
-            <ul>
+            <ul class="lst">
                 {% for skill in skills %}
                 <li>{{ skill }}</li>
                 {% endfor %}
@@ -58,7 +58,6 @@
     
 
 </div>
-
 
 
 <style>
@@ -126,7 +125,7 @@ label {
 .container {
     max-width: 800px;
     margin: auto;
-    background: #8e9df3;
+    background: #b7bde2;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -160,12 +159,12 @@ section h2 {
     padding-bottom: 5px;
 }
 
-ul {
+.lst {
     list-style: none;
     padding: 0;
 }
 
-ul li {
+.lst li {
     background: #e4e4e4;
     margin: 5px 0;
     padding: 10px;
