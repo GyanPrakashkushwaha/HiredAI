@@ -35,6 +35,7 @@ def upload(request):
     context['form'] = form
 
     # Update the existing context with resume data
-    context.update(parse_resume.data(r"assets\resumes\1715680272205.pdf"))
+    if form.is_valid():
+        context.update(parse_resume.data(request.FILES["resume_field"]))
 
     return render(request, "upload.html", context)
