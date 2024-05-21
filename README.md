@@ -1,3 +1,5 @@
+# I will work on it after learning few more stuff.
+
 # HiredAI
 
 ### recommendation section will eventually change to match.
